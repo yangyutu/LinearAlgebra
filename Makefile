@@ -19,7 +19,7 @@ LINKFLAGS = -static $(LINKOPTFLAGS) $(MKLLINKFLAGS) -ldl
 ODIR =
 
 
-OBJ = mainSDA.o ProgramArgs.o Matrix.o
+OBJ = mainSDA.o Matrix.o
 
 test : $(OBJ)
 	$(CPP) -o test $(OBJ) $(LINKFLAGS)
