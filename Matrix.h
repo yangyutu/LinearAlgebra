@@ -7,6 +7,7 @@
 
 #include "Globals.h"
 
+namespace Alg{
 
 class Matrix;
 class MutableMatrix;
@@ -886,3 +887,4 @@ public:
 void SolveLeastSquares(const Matrix & X, const Matrix & w, const Vector & y, std::vector<double> & temp, MutableVector & result);
 
 void Whiten(const Matrix & images, AllocatingMatrix & whiteningMat, double eps = 1e-8);
+}

@@ -13,6 +13,7 @@
 const long long MKL_MODE = VML_LA;
 
 using namespace std;
+using namespace Alg;
 
 void Vector::Print() const {
 	const double * p = Start();
