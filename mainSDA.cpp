@@ -7,7 +7,7 @@
 void vectorTest();
 void matrixTest();
 
-
+using namespace Alg;
 int main(int argc, char *argv[]){
 
   vectorTest();
@@ -40,7 +40,7 @@ void vectorTest(){
   vec2.Print();
 //TODO
 // vector dot product vector
-  double result = DotProduct(vec2,vec);  
+  double result = Vector::DotProduct(vec2,vec);  
 
 //TODO
 // vector times scalar
@@ -60,12 +60,31 @@ void vectorTest(){
   vec5.Print();
 
 // matrix vector product
-  AllocatingMatrix mat(5,5,1);
+  AllocatingMatrix mat(5,5);
+  for (int i = 0; i < mat.NumR() ; i++){
+    for (int j = 0; j < mat.NumC() ; j++){
+      mat.At(i,j) = i;
+    }
+  }
   std::cout << "print out matrix(5,5,1)" << std::endl;
+  mat.Print();
+  std::cout << "print out vec5" << std::endl;
+  vec5.Print();
   bool trans = false;
-  vec5.MultInto()
+  vec5.MultInto(mat,trans,vec5,1.0,1.0);
+  std::cout << "print out matrix vector product result" << std::endl;
+  vec5.Print();
   
   
 
+  
+}
+
+void matrixTest(){
+//Todo
+// matrix creation and initialization
+  AllocatingMatrix mat(5,5); 
+  
+  
   
 }
