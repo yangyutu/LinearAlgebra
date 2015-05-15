@@ -1,8 +1,8 @@
-OPTFLAGS = -O3 -march=nocona -mfpmath=sse -msse3 -Wuninitialized -flto
+#OPTFLAGS = -O3 -march=nocona -mfpmath=sse -msse3 -Wuninitialized -flto
 #MKL_INCLUDE = /opt/intel/mkl/include/
 #MKL_INCLUDE = /opt/intel/composer_xe_2013.0.079/mkl/include/
 MKL_INCLUDE = /opt/intel/composerxe/mkl/include
-CFLAGS = -std=c++0x -I$(MKL_INCLUDE) -I/opt/boost/boost_1_57_0 -c -DNDEBUG -D__LINUX $(OPTFLAGS) 
+CFLAGS = -std=c++0x -I$(MKL_INCLUDE) -I/opt/boost/boost_1_57_0 -c -DNDEBUG -D__LINUX 
 #CFLAGS = -std=c++0x -I/g/ssli/software/pkgs/boost_1_49_0 -c -DNDEBUG -D__LINUX $(OPTFLAGS) 
 CPP = g++
 #MKLROOT = /opt/intel/mkl
