@@ -1,0 +1,7 @@
+#Ignore these directories
+latex
+html
+
+*.o
+*.json
+test
